@@ -44,10 +44,12 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyPlugin([
-      { from: path.resolve(__dirname, "../engine"), to: "engine" },
-      { from: path.resolve(__dirname, "../eval"), to: "eval" }
-    ])
+    new CopyPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, "../engine"), to: "engine" },
+        { from: path.resolve(__dirname, "../eval"), to: "eval" }
+      ],
+    }),
     // new ForkTsCheckerWebpackPlugin({
     //   eslint: true,
     //   eslintOptions: {

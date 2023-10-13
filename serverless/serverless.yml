@@ -1,5 +1,4 @@
-service:
-  name: shogi-api
+service: shogi-api
 
 custom:
   webpack:
@@ -13,7 +12,7 @@ provider:
   name: aws
   region: ap-northeast-1
   timeout:
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   apiGateway:
     minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
   environment:
