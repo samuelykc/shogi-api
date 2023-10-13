@@ -8,7 +8,7 @@ import * as engineProcess from "./engine";
 const ENGINE = "dolphin101-sse42";
 const EVAL = "illqha4";
 
-export const hello: APIGatewayProxyHandler = async (event, _context) => {
+export const dolphin: APIGatewayProxyHandler = async (event, _context) => {
   const {
     byoyomi,
     position,
@@ -26,14 +26,15 @@ export const hello: APIGatewayProxyHandler = async (event, _context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify(
-      {
-        request: event,
-        ...result
-      },
-      null,
-      2
-    )
+    body: result.bestmove
+    // body: JSON.stringify(
+    //   {
+    //     request: event,
+    //     ...result
+    //   },
+    //   null,
+    //   2
+    // )
   };
 };
 

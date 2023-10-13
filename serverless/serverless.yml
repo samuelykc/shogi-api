@@ -20,7 +20,7 @@ provider:
 
 functions:
   bestmove:
-    handler: src/handler.hello
+    handler: src/handler.dolphin
     events:
       - http:
           method: get
@@ -39,10 +39,10 @@ functions:
   #   handler: handler.defaultHandler
   #   events:
   #     - websocket: $default
-  runUsi:
-    handler: src/webSocketHandler.runUsi
-    events:
-      - websocket:
-          route: runUsi
-    memorySize: 3008
-    timeout: 900
+  # runUsi:
+  #   handler: src/webSocketHandler.runUsi
+  #   events:
+  #     - websocket:
+  #         route: runUsi
+  #   memorySize: 3008
+  #   timeout: 900
