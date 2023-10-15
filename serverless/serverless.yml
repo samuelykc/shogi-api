@@ -20,7 +20,7 @@ provider:
 
 functions:
   bestmove:
-    handler: src/handler.dolphin
+    handler: src/handler.bestmove
     events:
       - http:
           method: get

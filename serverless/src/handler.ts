@@ -8,7 +8,7 @@ import * as engineProcess from "./engine";
 const ENGINE = "dolphin101-sse42";
 const EVAL = "illqha4";
 
-export const dolphin: APIGatewayProxyHandler = async (event, _context) => {
+export const bestmove: APIGatewayProxyHandler = async (event, _context) => {
   const {
     byoyomi,
     position,
